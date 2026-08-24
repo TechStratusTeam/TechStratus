@@ -253,6 +253,12 @@ p  { margin: 0 0 1rem; }
 .site-footer { background: var(--blue); color: #fff; padding: 3rem 0; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center; }
 .footer-brand img { width: 96px; height: auto; }
+.footer-contact { margin: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .8rem; font-size: 1.08rem; font-weight: 700; }
+/* Generous tap targets: seniors are a core audience, and 44px is the
+   recommended minimum for touch. */
+.footer-contact a { color: #fff; display: inline-block; padding: .5rem .25rem; }
+.footer-contact a:hover { color: var(--sky); text-decoration: underline; }
+.footer-sep { color: rgba(255,255,255,.45); }
 .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
 .footer-nav a { color: rgba(255,255,255,.92); font-weight: 600; }
 .footer-nav a:hover { color: #fff; text-decoration: underline; }

@@ -97,6 +97,25 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 
 ## Change log
 
+- Added phone and email to the footer on all 17 pages, closing the audit's
+  "visitor can't find your phone number" gap: contact details previously
+  existed only on the homepage and contact page, so someone landing on any
+  of the other 15 pages from search had no way to call without first
+  clicking through. Placed between the tagline and footer nav, as a new
+  `.footer-contact` line (phone / email, white on the blue footer, with the
+  separator dot matching the existing copyright line's style). Location was
+  deliberately not repeated since "Missoula, MT" is already in the copyright
+  line. Footer markup was byte-identical across all 17 files beforehand and
+  still is afterward, verified by hashing the footer block per file. Also
+  bumped the link tap targets to 45px tall (from 29px) to clear the 44px
+  touch-target guideline, which matters here specifically because seniors
+  are a core audience.
+- Hardened the form honeypot: the input was `id="company-website"`, a name
+  Chrome's autofill can match to organization/URL fields. Formspree
+  *silently discards* any submission where `_gotcha` is non-empty, so an
+  autofill would have made a real visitor's message vanish with no trace
+  and no error message. Renamed to a neutral id no autofill heuristic
+  recognizes.
 - Connected both contact forms to Formspree form `mwlejzle` (endpoint
   supplied by the user). Replaced the `YOUR_FORM_ID` placeholder in
   `contact.html` and `index.html`, swapped the now-obsolete setup comments

@@ -405,16 +405,23 @@
 
         <div class="contact-form-wrap reveal">
           <h3>Send us a message</h3>
-          <!-- TODO: connect this form to a handler (Formspree / Cloudflare). See README. -->
-          <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
+          <!-- Same Formspree form (mwlejzle) as contact.html. -->
+          <form class="contact-form" id="contact-form"
+                action="https://formspree.io/f/mwlejzle"
+                method="POST">
+            <input type="hidden" name="_subject" value="New message from techstratus.com (homepage)">
+            <div class="hp" aria-hidden="true">
+              <label for="company-website">Do not fill this in</label>
+              <input type="text" id="company-website" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
             <div class="form-row">
               <div class="form-field">
                 <label for="first-name">First name <span class="req">*</span></label>
-                <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+                <input type="text" id="first-name" name="First name" autocomplete="given-name" required>
               </div>
               <div class="form-field">
                 <label for="last-name">Last name <span class="req">*</span></label>
-                <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+                <input type="text" id="last-name" name="Last name" autocomplete="family-name" required>
               </div>
             </div>
             <div class="form-field">
@@ -423,13 +430,13 @@
             </div>
             <div class="form-field">
               <label for="phone">Phone number</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel">
+              <input type="tel" id="phone" name="Phone" autocomplete="tel">
             </div>
             <div class="form-field">
-              <label for="message">How can we help?</label>
-              <textarea id="message" name="message" rows="4"></textarea>
+              <label for="message">How can we help? <span class="req">*</span></label>
+              <textarea id="message" name="Message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Send message</button>
             <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
           </form>
         </div>

@@ -51,20 +51,68 @@
   }
 
   /* ---- Contact form ----
-     No backend yet. We capture the submit and show a friendly note.
-     To make it actually send, see README.md (Formspree or Cloudflare). */
+     Submits to whatever endpoint is in the form's action attribute
+     (Formspree by default) without leaving the page.
+
+     While the action still contains the YOUR_FORM_ID placeholder, we
+     show a "not connected yet" note and deliberately DO NOT clear the
+     form, so nobody loses what they typed. Once a real form ID is
+     pasted in, sending starts working with no other code changes. */
   var form = document.getElementById("contact-form");
   var note = document.getElementById("form-note");
+
   if (form && note) {
+    var button = form.querySelector('button[type="submit"]');
+    var buttonText = button ? button.textContent : "";
+
+    function setNote(kind, text) {
+      note.className = "form-note " + kind;
+      note.textContent = text;
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      note.className = "form-note ok";
-      note.textContent = "Thanks! This form isn't connected yet. For now, please call or email us and we'll get right back to you.";
-      form.reset();
+
+      var endpoint = form.getAttribute("action") || "";
+
+      // Not wired up yet: tell the visitor how to reach us, keep their text.
+      if (endpoint.indexOf("YOUR_FORM_ID") !== -1 || endpoint === "#" || endpoint === "") {
+        setNote("err", "This form isn't connected yet. Please call 406-284-5523 or email jacob@techstratus.com. Your message is still here so you can copy it.");
+        return;
+      }
+
+      if (button) { button.disabled = true; button.textContent = "Sending..."; }
+      setNote("", "");
+
+      fetch(endpoint, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            setNote("ok", "Thanks! Your message has been sent. We'll get back to you soon.");
+          } else {
+            return res.json().then(function (data) {
+              var msg = data && data.errors
+                ? data.errors.map(function (x) { return x.message; }).join(", ")
+                : "Something went wrong sending your message.";
+              throw new Error(msg);
+            });
+          }
+        })
+        .catch(function () {
+          setNote("err", "Sorry, your message couldn't be sent. Please call 406-284-5523 or email jacob@techstratus.com.");
+        })
+        .then(function () {
+          if (button) { button.disabled = false; button.textContent = buttonText; }
+        });
     });
   }
 })();

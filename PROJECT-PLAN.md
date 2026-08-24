@@ -24,24 +24,27 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   - Technology Guides (`technology-guides.html`) — ⬜
   - Blog (`blog.html`) — ⬜
   - Support Resources (`support-resources.html`) — ⬜
-- **Contact** (`contact.html`) — ⬜ (title only; the real contact info/form still lives on Home)
+- **Contact** (`contact.html`) — ✅
 
 ## Open items
 
 ### Blocking / functional
-- [ ] **Connect the contact form.** It currently shows a placeholder message
-      instead of actually sending anything. Easiest option:
-      [Formspree](https://formspree.io) — create a form, then set
-      `<form action="https://formspree.io/f/XXXX" method="POST">` in
-      `contact.html` and remove the `e.preventDefault()` handling in `js/main.js`.
+- [ ] **Send one test submission from the live site to activate Formspree.**
+      Both forms are wired to form `mwlejzle` and verified working. Formspree
+      requires confirming the destination email on the *first* submission, so
+      until Jacob submits one test message and clicks the confirmation link,
+      real submissions will not be delivered. This is the last step before the
+      contact path is fully live.
 - [ ] **Point `techstratus.com` at Cloudflare Pages.** Still on the old
       WordPress host. Need to confirm whether the domain's DNS is already on
       Cloudflare or managed elsewhere (e.g. Hostinger) before doing this.
 
 ### Content still needed
-- [ ] About
-- [ ] Contact (decide whether the contact info/form moves here from Home)
-- [ ] Resources overview + its 4 subpages
+- [ ] Resources overview + its 4 subpages (`resources.html`, `faq.html`,
+      `technology-guides.html`, `blog.html`, `support-resources.html`) — all
+      five are reachable from the main nav, so visitors currently hit blank
+      pages from normal navigation. `faq.html` is the quickest win: 55 FAQ
+      items already exist across 9 built pages and mostly need aggregating.
 - [ ] **Blog specifically**: once there's more than one post, hand-coded HTML
       pages get tedious to maintain — worth a simpler approach (templating or
       a lightweight generator) before writing much content there.
@@ -73,9 +76,10 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 - [ ] "Smart-Home Support" tile icon (Personal Technology page) is a generic
       house icon since no dedicated smart-home icon existed; swap for something
       more distinctive if desired.
-- [ ] Unused CSS: the old homepage "How It Works" step styles are still in
-      `styles.css` even though that section was removed from `index.html`.
-      Harmless, but could be deleted for a tidier file.
+- [ ] Unused CSS (verified by cross-referencing every class against all HTML):
+      `.card-feature`, `.card-feature-aside`, `.card-feature-body` (orphaned
+      when the homepage's Cloud Migration feature card was removed) and
+      `.section-alt`. Harmless, but ~15 lines that could go.
 
 ### Decisions made along the way (revisit if wrong)
 - All "Request Support / Schedule a Consultation / Contact TechStratus"-style
@@ -93,6 +97,41 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 
 ## Change log
 
+- Connected both contact forms to Formspree form `mwlejzle` (endpoint
+  supplied by the user). Replaced the `YOUR_FORM_ID` placeholder in
+  `contact.html` and `index.html`, swapped the now-obsolete setup comments
+  for short notes about where submissions go, and rewrote README's form
+  section from a setup walkthrough into a description of live behavior.
+  Verified with a stubbed `fetch` (so no real submission was consumed from
+  the 50/month free tier) that both forms now take the live path and POST
+  to the correct URL with all fields; homepage submissions carry a
+  "(homepage)" subject tag so the source page is identifiable. Also ran a
+  read-only GET against the endpoint, which returned 405 Method Not Allowed
+  (correct for a POST-only endpoint; a bad form ID would return 404),
+  confirming the ID resolves. Left the response-time line and the service
+  area list exactly as written, per the user. Remaining step is Jacob's own
+  first live submission, which triggers Formspree's one-time email
+  confirmation.
+- Built the Contact page and made both forms actually capable of sending.
+  This unblocks the site's single biggest problem: 73 CTA links across all
+  17 pages pointed at `contact.html`, which was an empty page containing
+  only an `<h1>`. The page now has: hero, a two-column contact block
+  (phone / email / location, service area, response time) beside the form,
+  and a 3-step "What Happens Next". Form adds a service-interest dropdown
+  (new `select` styling added to match the inputs), a required message
+  field, and a `_gotcha` honeypot for spam. Rewrote the form handler in
+  `js/main.js`: it previously called `e.preventDefault()`, showed
+  "isn't connected yet", and then ran `form.reset()` — wiping whatever the
+  visitor had typed. It now reads the form's `action`, and if the
+  `YOUR_FORM_ID` placeholder is still present shows the phone/email
+  **without clearing the form**; once a real endpoint is pasted in it
+  POSTs via `fetch` and shows inline success, clearing only on success.
+  On network failure it surfaces the phone/email and keeps the text.
+  Applied the same endpoint, honeypot, and field names to the homepage
+  form so one Formspree ID activates both. Verified all three paths
+  (unconnected / success / failure) in the browser, plus label coverage,
+  select-vs-input height match, honeypot off-screen but bot-visible,
+  and mobile with no horizontal overflow.
 - Rebuilt the homepage's "Our Services" section, which still described
   the site's pre-rebuild structure (Personal Tech Support / Business
   Tech Support / Marketing Support, with old service names like "Cloud

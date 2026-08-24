@@ -59,3 +59,27 @@ built vs. still blank) and the running punch list live there now, not here.
 - Phone: 406-284-5523
 - Email: jacob@techstratus.com
 - Location: Missoula, MT
+
+## Contact form
+
+Both forms (`contact.html` and `index.html`) submit to **Formspree**
+form `mwlejzle`, which emails submissions to jacob@techstratus.com.
+The handler is in `js/main.js`.
+
+**First-time activation:** Formspree sends a confirmation email on the
+very first submission. Send yourself one test message from the live site
+and click the link in that email, or submissions won't be delivered.
+
+**Plan limits:** free tier is 50 submissions/month. Paid plans start
+around $10/month. The same markup works with Web3Forms, Basin, or
+Formspark by swapping the URL in the two `action` attributes.
+
+**How the form behaves:**
+
+- Sends in the background; shows a success message without a page reload.
+- Clears the form **only after** a successful send.
+- If sending fails, shows the phone number and email and **keeps the
+  visitor's text** so nothing is lost.
+- A hidden honeypot field (`_gotcha`) silently discards most spam bots.
+- Homepage submissions are subject-tagged "(homepage)" so you can tell
+  which page a message came from.

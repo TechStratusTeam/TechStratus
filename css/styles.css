@@ -415,6 +415,12 @@ p  { margin: 0 0 1rem; }
 .section-blue .group-label { background: rgba(255,255,255,.16); color: #fff; }
 .section-blue .group-title { color: #fff; }
 
+/* "See all ... services" link sits directly on the blue background (not inside
+   a white .card), so it needs to override the default blue link color or it's
+   invisible. Scoped to > so it doesn't touch .card .link-arrow underneath. */
+.section-blue .service-group > .link-arrow { color: #fff; }
+.section-blue .service-group > .link-arrow:hover { color: rgba(255,255,255,.8); }
+
 /* Responsible-AI note on blue */
 .section-blue .ai-note { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); color: rgba(255,255,255,.95); }
 .section-blue .ai-note-icon { color: #fff; }

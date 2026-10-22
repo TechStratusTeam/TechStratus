@@ -607,3 +607,22 @@ p  { margin: 0 0 1rem; }
 @media (max-width: 700px) {
   .flip-card { flex-basis: 100%; }
 }
+
+/* =========================================================
+   Digital business card page (jacob.html) — QR code landing
+   ========================================================= */
+.card-body { background: var(--bg-alt); }
+.card-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1.2rem; }
+.card-page-inner {
+  width: 100%; max-width: 440px; text-align: center;
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 2.25rem 1.75rem 1.75rem;
+}
+.card-page-logo { width: 96px; height: 96px; margin: 0 auto 1rem; object-fit: contain; }
+.card-page-name { font-size: clamp(1.7rem, 6vw, 2.1rem); color: var(--blue); margin-bottom: .25rem; }
+.card-page-title { font-weight: 600; color: var(--ink); margin-bottom: .15rem; }
+.card-page-place { color: var(--muted); margin-bottom: 1.75rem; }
+.card-page-actions { display: grid; gap: .75rem; }
+.card-page-actions .btn { justify-content: flex-start; padding-left: 1.4rem; }
+.card-page-site { margin: 1.5rem 0 0; font-size: .95rem; }
+.card-page-site a { color: var(--muted); font-weight: 600; }

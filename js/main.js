@@ -82,7 +82,7 @@
 
       // Not wired up yet: tell the visitor how to reach us, keep their text.
       if (endpoint.indexOf("YOUR_FORM_ID") !== -1 || endpoint === "#" || endpoint === "") {
-        setNote("err", "This form isn't connected yet. Please call 406-284-5523 or email jacob@techstratus.com. Your message is still here so you can copy it.");
+        setNote("err", "This form isn't connected yet. Please call 406-218-0032 or email jacob@techstratus.com. Your message is still here so you can copy it.");
         return;
       }
 
@@ -108,7 +108,7 @@
           }
         })
         .catch(function () {
-          setNote("err", "Sorry, your message couldn't be sent. Please call 406-284-5523 or email jacob@techstratus.com.");
+          setNote("err", "Sorry, your message couldn't be sent. Please call 406-218-0032 or email jacob@techstratus.com.");
         })
         .then(function () {
           if (button) { button.disabled = false; button.textContent = buttonText; }

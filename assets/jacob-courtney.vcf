@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Courtney;Jacob;;;
+FN:Jacob Courtney
+ORG:TechStratus
+TITLE:Founder & Technology Consultant
+TEL;TYPE=WORK,VOICE:+1-406-218-0032
+EMAIL;TYPE=INTERNET,WORK:jacob@techstratus.com
+URL:https://techstratus.com
+ADR;TYPE=WORK:;;;Missoula;MT;;US
+END:VCARD

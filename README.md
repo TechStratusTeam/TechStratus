@@ -56,7 +56,7 @@ built vs. still blank) and the running punch list live there now, not here.
 
 ## Contact info on the site
 
-- Phone: 406-284-5523
+- Phone: 406-218-0032
 - Email: jacob@techstratus.com
 - Location: Missoula, MT
 

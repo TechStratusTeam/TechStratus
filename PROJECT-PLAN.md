@@ -10,14 +10,15 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 
 - **Home** (`index.html`) — ✅
 - **Personal Technology** (`personal-technology.html`) — ✅
-  - Senior Tech Support (`senior-support.html`) — ✅
   - Family Tech Support (`family-support.html`) — ✅
-  - Home Office Support (`home-office-support.html`) — ✅
-- **Business Solutions** (`business-solutions.html`) — ✅ (overview page; all 4 subpages built)
-  - Business IT Services (`business-it-services.html`) — ✅
-  - Digital Presence (`digital-presence.html`) — ✅
-  - AI & Automation (`ai-automation.html`) — ✅
-  - Technology Consulting (`technology-consulting.html`) — ✅
+  - Senior Tech Support (`senior-support.html`) — ✅
+- **Business Technology Services** (`business-technology.html`) — ✅
+  - Website Design & Development (`website-design.html`) — ✅
+  - Website Care & Maintenance (`website-care.html`) — ✅
+  - Branding & Visual Identity (`branding.html`) — ✅
+  - Social Media Management (`social-media.html`) — ✅
+  - Cloud & Business Systems (`cloud-business-systems.html`) — ✅
+  - AI & Business Automation (`ai-automation.html`) — ✅
 - **About** (`about.html`) — ✅
 - **Resources** (`resources.html`) — ⬜
   - Frequently Asked Questions (`faq.html`) — ⬜
@@ -97,6 +98,16 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 
 ## Change log
 
+- Services revamp from "New TechStratus Services and Site Mapping.docx": Personal
+  Technology is now Family + Senior (4 service areas each); Business Technology
+  Services is now six services (website design, website care, branding, social
+  media, cloud & business systems, AI & business automation). Retired Home
+  Office Support, Business IT Services, Digital Presence, and Technology
+  Consulting; their old URLs 301 to the closest current page via `_redirects`.
+  Pages were rewritten to be short (hero tagline, intro, service list, CTA), and
+  the About, Contact (topic list), homepage, nav, and footer were updated to
+  match. The doc's "how to position it" notes were treated as internal and not
+  published.
 - Added phone and email to the footer on all 17 pages, closing the audit's
   "visitor can't find your phone number" gap: contact details previously
   existed only on the homepage and contact page, so someone landing on any

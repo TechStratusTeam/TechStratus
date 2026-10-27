@@ -186,14 +186,6 @@ p  { margin: 0 0 1rem; }
 
 /* ---------- Steps ---------- */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); counter-reset: step; }
-@media (min-width: 901px) {
-  /* Digital Presence's 6-step process divides evenly into 3 columns;
-     the shared 4-column grid would strand the last 2 steps. */
-  #process .steps { grid-template-columns: repeat(3, 1fr); }
-  /* AI & Automation's 5-step process: the shared 4-column grid would
-     strand the last step alone in its own row. */
-  #ai-process .steps { grid-template-columns: repeat(5, 1fr); }
-}
 .step { text-align: center; }
 .step-icon {
   width: 84px; height: 84px; margin: 0 auto 1rem;
@@ -630,3 +622,10 @@ p  { margin: 0 0 1rem; }
 .card-page-actions .btn { justify-content: flex-start; padding-left: 1.4rem; }
 .card-page-site { margin: 1.5rem 0 0; font-size: .95rem; }
 .card-page-site a { color: var(--muted); font-weight: 600; }
+
+/* Service pages: cropped views of a shared photo, and linked tiles */
+.about-media img.crop-top, .about-media img.crop-bottom { aspect-ratio: 1 / 1; object-fit: cover; }
+.about-media img.crop-top { object-position: top; }
+.about-media img.crop-bottom { object-position: bottom; }
+a.tile { display: block; color: var(--slate); }
+a.tile:hover { color: var(--slate); }

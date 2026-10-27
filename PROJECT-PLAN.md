@@ -104,7 +104,9 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   media, cloud & business systems, AI & business automation). Retired Home
   Office Support, Business IT Services, Digital Presence, and Technology
   Consulting; their old URLs 301 to the closest current page via `_redirects`.
-  Pages were rewritten to be short (hero tagline, intro, service list, CTA), and
+  Pages were rewritten to be short (hero tagline, intro, service list, FAQ, CTA);
+  every service page and both hub pages keep a FAQ section (old answers kept
+  where still accurate, adapted or added where services changed), and
   the About, Contact (topic list), homepage, nav, and footer were updated to
   match. The doc's "how to position it" notes were treated as internal and not
   published.

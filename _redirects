@@ -5,7 +5,11 @@
 /business-solutions.html /business-technology 301
 /business-it-services /cloud-business-systems 301
 /business-it-services.html /cloud-business-systems 301
-/digital-presence /website-design 301
-/digital-presence.html /website-design 301
+/digital-presence /website-development-maintenance 301
+/digital-presence.html /website-development-maintenance 301
+/website-design /website-development-maintenance 301
+/website-design.html /website-development-maintenance 301
+/website-care /website-development-maintenance 301
+/website-care.html /website-development-maintenance 301
 /technology-consulting /business-technology 301
 /technology-consulting.html /business-technology 301

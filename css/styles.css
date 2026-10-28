@@ -629,3 +629,11 @@ p  { margin: 0 0 1rem; }
 .about-media img.crop-bottom { object-position: bottom; }
 a.tile { display: block; color: var(--slate); }
 a.tile:hover { color: var(--slate); }
+
+/* Two-part service page: second block puts the photo on the right (stacks image-first on mobile) */
+.about-grid.reverse { grid-template-columns: 1.2fr 1fr; }
+.about-grid.reverse .about-media { order: 2; }
+@media (max-width: 900px) {
+  .about-grid.reverse { grid-template-columns: 1fr; }
+  .about-grid.reverse .about-media { order: -1; }
+}

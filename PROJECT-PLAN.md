@@ -13,7 +13,8 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   - Family Tech Support (`family-support.html`) — ✅
   - Senior Tech Support (`senior-support.html`) — ✅
 - **Business Technology Services** (`business-technology.html`) — ✅
-  - Website Development & Maintenance (`website-development-maintenance.html`) — ✅ (design/development + care/maintenance combined on one page)
+  - Website Design & Development (`website-design.html`) — ✅
+  - Website Care & Maintenance (`website-care.html`) — ✅
   - Branding & Visual Identity (`branding.html`) — ✅
   - Social Media Management (`social-media.html`) — ✅
   - Cloud & Business Systems (`cloud-business-systems.html`) — ✅

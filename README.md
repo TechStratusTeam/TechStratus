@@ -17,7 +17,7 @@ files, not templated).
 ├── index.html          # Home (full content)
 ├── personal-technology.html, family-support.html,
 │   senior-support.html                              # Personal Technology + subpages
-├── business-technology.html, website-development-maintenance.html,
+├── business-technology.html, website-design.html, website-care.html,
 │   branding.html, social-media.html,
 │   cloud-business-systems.html, ai-automation.html  # Business Technology + subpages
 ├── about.html, contact.html, jacob.html             # jacob.html = digital business card (QR code)

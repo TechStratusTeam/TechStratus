@@ -1,7 +1,7 @@
 # TechStratus
 
-Marketing website for **TechStratus** — friendly technology support for seniors,
-families, home offices, and small businesses in Missoula, Montana.
+Marketing website for **TechStratus** — friendly technology support for families,
+seniors, and small businesses in Missoula, Montana.
 
 Plain static site (HTML / CSS / JS). No build step. Hosted on **Cloudflare Pages**,
 source on **GitHub**.
@@ -15,17 +15,19 @@ files, not templated).
 ```
 .
 ├── index.html          # Home (full content)
-├── personal-technology.html, senior-support.html, family-support.html,
-│   home-office-support.html                        # Personal Technology + subpages
-├── business-solutions.html, business-it-services.html, digital-presence.html,
-│   ai-automation.html, technology-consulting.html   # Business Solutions + subpages
-├── about.html, contact.html
+├── personal-technology.html, family-support.html,
+│   senior-support.html                              # Personal Technology + subpages
+├── business-technology.html, website-design.html, website-care.html,
+│   branding.html, social-media.html,
+│   cloud-business-systems.html, ai-automation.html  # Business Technology + subpages
+├── about.html, contact.html, jacob.html             # jacob.html = digital business card (QR code)
 ├── resources.html, faq.html, technology-guides.html,
 │   blog.html, support-resources.html                # Resources + subpages
 ├── css/styles.css      # all styles (brand colors live in :root at the top)
 ├── js/main.js          # mobile nav, scroll effects, contact form
 ├── assets/             # logos, hero video/photos
-└── _headers            # Cloudflare caching/security headers
+├── _headers            # Cloudflare caching/security headers
+└── _redirects          # Old (retired) page URLs -> current pages
 ```
 
 ## Editing & previewing locally

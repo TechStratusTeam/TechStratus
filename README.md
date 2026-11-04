@@ -22,6 +22,7 @@ files, not templated).
 │   cloud-business-systems.html, ai-automation.html  # Business Technology + subpages
 ├── about.html, contact.html, jacob.html             # jacob.html = digital business card (QR code)
 ├── archive/            # Retired Resources pages (not linked, redirected to home)
+├── favicon.ico, sitemap.xml                         # Google favicon + page list (update sitemap when adding pages)
 ├── css/styles.css      # all styles (brand colors live in :root at the top)
 ├── js/main.js          # mobile nav, scroll effects, contact form
 ├── assets/             # logos, hero video/photos

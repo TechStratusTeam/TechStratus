@@ -623,7 +623,6 @@ p  { margin: 0 0 1rem; }
 .card-page-site { margin: 1.5rem 0 0; font-size: .95rem; }
 .card-page-site a { color: var(--muted); font-weight: 600; }
 
-/* Business Technology service pages: portrait 4:5 photos; linked tiles */
-.about-media img.portrait { aspect-ratio: 4 / 5; object-fit: cover; }
+/* Service pages: linked tiles */
 a.tile { display: block; color: var(--slate); }
 a.tile:hover { color: var(--slate); }

@@ -623,9 +623,7 @@ p  { margin: 0 0 1rem; }
 .card-page-site { margin: 1.5rem 0 0; font-size: .95rem; }
 .card-page-site a { color: var(--muted); font-weight: 600; }
 
-/* Service pages: cropped views of a shared photo, and linked tiles */
-.about-media img.crop-top, .about-media img.crop-bottom { aspect-ratio: 1 / 1; object-fit: cover; }
-.about-media img.crop-top { object-position: top; }
-.about-media img.crop-bottom { object-position: bottom; }
+/* Business Technology service pages: portrait 4:5 photos; linked tiles */
+.about-media img.portrait { aspect-ratio: 4 / 5; object-fit: cover; }
 a.tile { display: block; color: var(--slate); }
 a.tile:hover { color: var(--slate); }

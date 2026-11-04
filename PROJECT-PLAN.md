@@ -585,3 +585,4 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   white cards/FAQ items is unaffected. Checkmark bullets unchanged.
 - Archived the Resources section (5 pages to `archive/`, nav dropdown and footer link removed on every page). Removed "Meet the Founder" from About; Who TechStratus Serves now uses the light-tint section so the blue band stays separated.
 - Switched both contact forms from Formspree to Web3Forms (hidden `access_key`, `botcheck` honeypot; JS now checks the JSON `success` flag).
+- Google/SEO housekeeping: added `favicon.ico`, 48/96/192 px favicon PNGs (Google wants multiples of 48), a 180 px `apple-touch-icon.png`, `sitemap.xml`, and a `canonical` tag on every page. `www.techstratus.com` should still be redirected to `techstratus.com` with a Cloudflare Redirect Rule. `robots.txt` is managed by Cloudflare, so there is none in the repo.

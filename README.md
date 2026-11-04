@@ -21,8 +21,7 @@ files, not templated).
 │   branding.html, social-media.html,
 │   cloud-business-systems.html, ai-automation.html  # Business Technology + subpages
 ├── about.html, contact.html, jacob.html             # jacob.html = digital business card (QR code)
-├── resources.html, faq.html, technology-guides.html,
-│   blog.html, support-resources.html                # Resources + subpages
+├── archive/            # Retired Resources pages (not linked, redirected to home)
 ├── css/styles.css      # all styles (brand colors live in :root at the top)
 ├── js/main.js          # mobile nav, scroll effects, contact form
 ├── assets/             # logos, hero video/photos

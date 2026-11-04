@@ -20,11 +20,7 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   - Cloud & Business Systems (`cloud-business-systems.html`) — ✅
   - AI & Business Automation (`ai-automation.html`) — ✅
 - **About** (`about.html`) — ✅
-- **Resources** (`resources.html`) — ⬜
-  - Frequently Asked Questions (`faq.html`) — ⬜
-  - Technology Guides (`technology-guides.html`) — ⬜
-  - Blog (`blog.html`) — ⬜
-  - Support Resources (`support-resources.html`) — ⬜
+- **Resources** — archived (pages moved to `archive/`, removed from nav/footer; old URLs 301 to home)
 - **Contact** (`contact.html`) — ✅
 
 ## Open items
@@ -41,11 +37,9 @@ Legend: ✅ built out · ⬜ blank stub (title only)
       Cloudflare or managed elsewhere (e.g. Hostinger) before doing this.
 
 ### Content still needed
-- [ ] Resources overview + its 4 subpages (`resources.html`, `faq.html`,
-      `technology-guides.html`, `blog.html`, `support-resources.html`) — all
-      five are reachable from the main nav, so visitors currently hit blank
-      pages from normal navigation. `faq.html` is the quickest win: 55 FAQ
-      items already exist across 9 built pages and mostly need aggregating.
+- [x] Resources section archived. `resources.html`, `faq.html`, `technology-guides.html`,
+      `blog.html`, `support-resources.html` now live in `archive/` (unpublished; `_redirects`
+      sends them and `/archive/*` to home). Restore by moving back to the root and re-adding nav links.
 - [ ] **Blog specifically**: once there's more than one post, hand-coded HTML
       pages get tedious to maintain — worth a simpler approach (templating or
       a lightweight generator) before writing much content there.
@@ -593,3 +587,4 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   colors — including `.eyebrow`, which was blue-on-blue and essentially
   invisible. All of that now turns white on blue sections; text inside
   white cards/FAQ items is unaffected. Checkmark bullets unchanged.
+- Archived the Resources section (5 pages to `archive/`, nav dropdown and footer link removed on every page). Removed "Meet the Founder" from About; Who TechStratus Serves now uses the light-tint section so the blue band stays separated.

@@ -30,4 +30,4 @@ a technology-support business in Missoula, MT. Source on GitHub, hosted on Cloud
 - Manual: `npx wrangler pages deploy . --project-name techstratus`.
 
 ## Open items
-- Contact forms post to Formspree (see README). Confirm the first-submission activation email was clicked.
+- Contact forms post to Web3Forms (see README). Confirm test submissions arrive in Jacob's inbox.

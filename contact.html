@@ -105,19 +105,17 @@
         <div class="contact-form-wrap reveal">
           <h3>Send a message</h3>
 
-          <!-- Submissions go to Formspree (form mwlejzle), which emails them
-               to jacob@techstratus.com. Handler lives in js/main.js. -->
+          <!-- Submissions go to Web3Forms, which emails them to the address the access key was created with. Handler lives in js/main.js. -->
           <form class="contact-form" id="contact-form"
-                action="https://formspree.io/f/mwlejzle"
+                action="https://api.web3forms.com/submit"
                 method="POST">
 
-            <input type="hidden" name="_subject" value="New message from techstratus.com">
+            <input type="hidden" name="access_key" value="9700dbc7-52d5-47a6-9d15-db50e45bcc26">
+            <input type="hidden" name="subject" value="New message from techstratus.com">
+            <input type="hidden" name="from_name" value="TechStratus Website">
 
             <!-- Spam honeypot: hidden from people, tempting to bots. -->
-            <div class="hp" aria-hidden="true">
-              <label for="hp-nofill">Leave this field empty</label>
-              <input type="text" id="hp-nofill" name="_gotcha" tabindex="-1" autocomplete="off">
-            </div>
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div class="form-row">
               <div class="form-field">

@@ -5,7 +5,9 @@ A plain **static website** (HTML/CSS/JS, no build step, no framework) for TechSt
 a technology-support business in Missoula, MT. Source on GitHub, hosted on Cloudflare Pages.
 
 ## Working on it
-- The entire page is `index.html` (single-page site with anchor sections).
+- Multi-page static site: `index.html` plus one `.html` per service/section (see README "Structure").
+  Shared header/footer markup is duplicated in each file (no templating), so nav changes must be made in every page.
+  Bump the `styles.css?v=N` query string in every page when CSS changes (Cloudflare/browsers cache it).
 - All styling is `css/styles.css`. **Brand colors are CSS variables in `:root`** at the top —
   change them there, not scattered through the file.
 - Behavior is `js/main.js` (vanilla JS, no dependencies).
@@ -28,5 +30,4 @@ a technology-support business in Missoula, MT. Source on GitHub, hosted on Cloud
 - Manual: `npx wrangler pages deploy . --project-name techstratus`.
 
 ## Open items
-- Contact form is not wired to a backend yet (see README "To do").
-- Domain `techstratus.com` still needs to be pointed at the Pages project.
+- Contact forms post to Formspree (see README). Confirm the first-submission activation email was clicked.

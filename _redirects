@@ -1,0 +1,24 @@
+# Retired pages -> closest current page
+/home-office-support /personal-technology 301
+/home-office-support.html /personal-technology 301
+/business-solutions /business-technology 301
+/business-solutions.html /business-technology 301
+/business-it-services /cloud-business-systems 301
+/business-it-services.html /cloud-business-systems 301
+/digital-presence /website-design 301
+/digital-presence.html /website-design 301
+/technology-consulting /business-technology 301
+/technology-consulting.html /business-technology 301
+
+# Archived Resources section (pages kept in /archive, not published)
+/resources / 301
+/resources.html / 301
+/faq / 301
+/faq.html / 301
+/technology-guides / 301
+/technology-guides.html / 301
+/blog / 301
+/blog.html / 301
+/support-resources / 301
+/support-resources.html / 301
+/archive/* / 301

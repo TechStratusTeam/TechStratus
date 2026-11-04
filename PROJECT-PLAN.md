@@ -26,12 +26,8 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 ## Open items
 
 ### Blocking / functional
-- [ ] **Send one test submission from the live site to activate Formspree.**
-      Both forms are wired to form `mwlejzle` and verified working. Formspree
-      requires confirming the destination email on the *first* submission, so
-      until Jacob submits one test message and clicks the confirmation link,
-      real submissions will not be delivered. This is the last step before the
-      contact path is fully live.
+- [x] Contact forms switched from Formspree to Web3Forms (Formspree's spam filter
+      sent real messages to Spam, so no emails arrived). Confirm a live test arrives.
 - [ ] **Point `techstratus.com` at Cloudflare Pages.** Still on the old
       WordPress host. Need to confirm whether the domain's DNS is already on
       Cloudflare or managed elsewhere (e.g. Hostinger) before doing this.
@@ -588,3 +584,4 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   invisible. All of that now turns white on blue sections; text inside
   white cards/FAQ items is unaffected. Checkmark bullets unchanged.
 - Archived the Resources section (5 pages to `archive/`, nav dropdown and footer link removed on every page). Removed "Meet the Founder" from About; Who TechStratus Serves now uses the light-tint section so the blue band stays separated.
+- Switched both contact forms from Formspree to Web3Forms (hidden `access_key`, `botcheck` honeypot; JS now checks the JSON `success` flag).

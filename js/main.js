@@ -52,7 +52,7 @@
 
   /* ---- Contact form ----
      Submits to whatever endpoint is in the form's action attribute
-     (Formspree by default) without leaving the page.
+     (Web3Forms) without leaving the page.
 
      While the action still contains the YOUR_FORM_ID placeholder, we
      show a "not connected yet" note and deliberately DO NOT clear the
@@ -95,17 +95,14 @@
         headers: { Accept: "application/json" }
       })
         .then(function (res) {
-          if (res.ok) {
-            form.reset();
-            setNote("ok", "Thanks! Your message has been sent. We'll get back to you soon.");
-          } else {
-            return res.json().then(function (data) {
-              var msg = data && data.errors
-                ? data.errors.map(function (x) { return x.message; }).join(", ")
-                : "Something went wrong sending your message.";
-              throw new Error(msg);
-            });
-          }
+          return res.json().then(function (data) {
+            if (res.ok && data && data.success) {
+              form.reset();
+              setNote("ok", "Thanks! Your message has been sent. We'll get back to you soon.");
+            } else {
+              throw new Error((data && data.message) || "Something went wrong sending your message.");
+            }
+          });
         })
         .catch(function () {
           setNote("err", "Sorry, your message couldn't be sent. Please call 406-218-0032 or email jacob@techstratus.com.");

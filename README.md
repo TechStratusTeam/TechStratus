@@ -63,17 +63,18 @@ built vs. still blank) and the running punch list live there now, not here.
 
 ## Contact form
 
-Both forms (`contact.html` and `index.html`) submit to **Formspree**
-form `mwlejzle`, which emails submissions to jacob@techstratus.com.
-The handler is in `js/main.js`.
+Both forms (`contact.html` and `index.html`) submit to **Web3Forms**
+(`https://api.web3forms.com/submit`), which emails each message to the address
+the access key was created with. The access key is public by design and lives in
+a hidden `access_key` field in both forms. The handler is in `js/main.js`.
 
-**First-time activation:** Formspree sends a confirmation email on the
-very first submission. Send yourself one test message from the live site
-and click the link in that email, or submissions won't be delivered.
+**History:** the forms used Formspree until Nov 2026, but its spam filter kept
+routing real messages (including Jacob's own tests) to the Spam tab, so no
+notification emails were sent. The old Formspree form ID was `mwlejzle`.
 
-**Plan limits:** free tier is 50 submissions/month. Paid plans start
-around $10/month. The same markup works with Web3Forms, Basin, or
-Formspark by swapping the URL in the two `action` attributes.
+**Plan limits:** Web3Forms free tier is 250 submissions/month. To change the
+destination address, create a new access key at web3forms.com and replace it in
+both forms.
 
 **How the form behaves:**
 
@@ -81,6 +82,6 @@ Formspark by swapping the URL in the two `action` attributes.
 - Clears the form **only after** a successful send.
 - If sending fails, shows the phone number and email and **keeps the
   visitor's text** so nothing is lost.
-- A hidden honeypot field (`_gotcha`) silently discards most spam bots.
+- A hidden honeypot checkbox (`botcheck`) silently discards most spam bots.
 - Homepage submissions are subject-tagged "(homepage)" so you can tell
   which page a message came from.

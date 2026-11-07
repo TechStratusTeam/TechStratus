@@ -19,7 +19,8 @@ files, not templated).
 │   senior-support.html                              # Personal Technology + subpages
 ├── business-technology.html, website-design.html, website-care.html,
 │   branding.html, social-media.html,
-│   cloud-business-systems.html, ai-automation.html  # Business Technology + subpages
+│   cloud-business-systems.html, ai-automation.html,
+│   custom-software.html                             # Business Technology + subpages
 ├── about.html, contact.html, jacob.html             # jacob.html = digital business card (QR code)
 ├── archive/            # Retired Resources pages (not linked, redirected to home)
 ├── favicon.ico, sitemap.xml                         # Google favicon + page list (update sitemap when adding pages)

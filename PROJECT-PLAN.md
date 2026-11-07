@@ -19,6 +19,7 @@ Legend: ✅ built out · ⬜ blank stub (title only)
   - Social Media Management (`social-media.html`) — ✅
   - Cloud & Business Systems (`cloud-business-systems.html`) — ✅
   - AI & Business Automation (`ai-automation.html`) — ✅
+  - Custom Software Design (`custom-software.html`) — ✅ (no photo yet; text-only "What We Build" cards)
 - **About** (`about.html`) — ✅
 - **Resources** — archived (pages moved to `archive/`, removed from nav/footer; old URLs 301 to home)
 - **Contact** (`contact.html`) — ✅
@@ -587,3 +588,4 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 - Switched both contact forms from Formspree to Web3Forms (hidden `access_key`, `botcheck` honeypot; JS now checks the JSON `success` flag).
 - Google/SEO housekeeping: added `favicon.ico`, 48/96/192 px favicon PNGs (Google wants multiples of 48), a 180 px `apple-touch-icon.png`, `sitemap.xml`, and a `canonical` tag on every page. `www.techstratus.com` should still be redirected to `techstratus.com` with a Cloudflare Redirect Rule. `robots.txt` is managed by Cloudflare, so there is none in the repo.
 - Lightened the home page hero video overlay (90%/78% to 62%/48% white). To restore: remove the `hero-overlay-light` class from the overlay div in `index.html` (or revert PR #12).
+- Added Custom Software Design (`custom-software.html`) as the 7th Business Technology page: What We Build (internal tools, portals, integrations), How It Works, 7 FAQs. Added to every nav dropdown, the business hub, home page cards, service-page tiles, the contact topic list, and the sitemap. Updated the AI & Automation FAQ to link to it. Business-hub card grids now center a lone last card.

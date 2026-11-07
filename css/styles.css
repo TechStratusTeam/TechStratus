@@ -161,6 +161,7 @@ p  { margin: 0 0 1rem; }
 .cards { display: grid; gap: var(--gap); }
 .cards-2 { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin: 0 auto; }
 .cards-3 { grid-template-columns: repeat(3, 1fr); }
+@media (min-width: 901px) { .cards-3 > .card:last-child:nth-child(3n+1) { grid-column: 2; } }
 .card {
   background: var(--white); color: var(--slate); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 2.25rem 2rem; box-shadow: var(--shadow); display: flex; flex-direction: column;

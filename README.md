@@ -17,10 +17,12 @@ files, not templated).
 ├── index.html          # Home (full content)
 ├── personal-technology.html, family-support.html,
 │   senior-support.html                              # Personal Technology + subpages
-├── business-technology.html, website-design.html, website-care.html,
-│   branding.html, social-media.html,
-│   cloud-business-systems.html, ai-automation.html,
-│   custom-software.html                             # Business Technology + subpages
+├── digital-solutions.html, website-design.html, website-care.html,
+│   seo-digital-marketing.html, social-media.html, branding.html,
+│   ai-automation.html, custom-software.html         # Digital Solutions + subpages
+├── it-services.html, business-it-support.html,
+│   cloud-business-systems.html,
+│   fractional-it-leadership.html                    # IT Services + subpages
 ├── about.html, contact.html, jacob.html             # jacob.html = digital business card (QR code)
 ├── archive/            # Retired Resources pages (not linked, redirected to home)
 ├── favicon.ico, sitemap.xml                         # Google favicon + page list (update sitemap when adding pages)

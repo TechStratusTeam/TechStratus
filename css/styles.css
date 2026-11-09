@@ -109,6 +109,7 @@ p  { margin: 0 0 1rem; }
   position: relative; min-height: 65vh; display: flex; align-items: center;
   color: var(--slate); overflow: hidden; text-align: center;
   background: #e4edf4; /* shown while the hero video loads (no poster image, so the logo doesn't flash) */
+  isolation: isolate; /* keeps the z-index:-2 video above this background instead of behind it */
 }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
 .hero-overlay {

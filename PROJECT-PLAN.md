@@ -9,17 +9,21 @@ digging through chat history.
 Legend: ✅ built out · ⬜ blank stub (title only)
 
 - **Home** (`index.html`) — ✅
+- **Digital Solutions** (`digital-solutions.html`) — ✅ (was `business-technology.html`; old URL 301s here)
+  - Website Design & Development (`website-design.html`) — ✅
+  - Website Care & Maintenance (`website-care.html`) — ✅
+  - SEO & Digital Marketing (`seo-digital-marketing.html`) — ✅ (new)
+  - Social Media Management (`social-media.html`) — ✅
+  - Branding & Visual Identity (`branding.html`) — ✅
+  - AI & Business Automation (`ai-automation.html`) — ✅
+  - Custom Software Design (`custom-software.html`) — ✅ (no photo yet; text-only "What We Build" cards)
+- **IT Services** (`it-services.html`) — ✅ (new)
+  - Business IT Support (`business-it-support.html`) — ✅ (new, on-demand)
+  - Cloud & Business Systems (`cloud-business-systems.html`) — ✅
+  - Fractional IT Leadership (`fractional-it-leadership.html`) — ✅ (new)
 - **Personal Technology** (`personal-technology.html`) — ✅
   - Family Tech Support (`family-support.html`) — ✅
   - Senior Tech Support (`senior-support.html`) — ✅
-- **Business Technology Services** (`business-technology.html`) — ✅
-  - Website Design & Development (`website-design.html`) — ✅
-  - Website Care & Maintenance (`website-care.html`) — ✅
-  - Branding & Visual Identity (`branding.html`) — ✅
-  - Social Media Management (`social-media.html`) — ✅
-  - Cloud & Business Systems (`cloud-business-systems.html`) — ✅
-  - AI & Business Automation (`ai-automation.html`) — ✅
-  - Custom Software Design (`custom-software.html`) — ✅ (no photo yet; text-only "What We Build" cards)
 - **About** (`about.html`) — ✅
 - **Resources** — archived (pages moved to `archive/`, removed from nav/footer; old URLs 301 to home)
 - **Contact** (`contact.html`) — ✅
@@ -34,6 +38,16 @@ Legend: ✅ built out · ⬜ blank stub (title only)
       Cloudflare or managed elsewhere (e.g. Hostinger) before doing this.
 
 ### Content still needed
+- [ ] **Review the new pages' wording before publishing.** Business IT Support,
+      Fractional IT Leadership, and SEO & Digital Marketing were written from the
+      site plan in the existing plain-language voice; check every claim matches what
+      Jacob actually offers (pricing language, on-site availability, "ongoing service
+      agreements", and the paid ads / email marketing offers on the SEO page).
+- [ ] **Not built yet (held on purpose):** Managed IT Services, Cybersecurity,
+      Network & Infrastructure, and Backup & Disaster Recovery from the site plan.
+      Add them once the tooling and service terms exist. "Get Started / Support" menu
+      (proposal / booking / existing-client support) also deferred; the nav CTA is
+      still the single "Get Started" button.
 - [x] Resources section archived. `resources.html`, `faq.html`, `technology-guides.html`,
       `blog.html`, `support-resources.html` now live in `archive/` (unpublished; `_redirects`
       sends them and `/archive/*` to home). Restore by moving back to the root and re-adding nav links.
@@ -89,6 +103,21 @@ Legend: ✅ built out · ⬜ blank stub (title only)
 
 ## Change log
 
+- Restructured the site around the new site plan (`TechStratus_Site_Plan.docx`): the
+  business side is now two divisions, **Digital Solutions** and **IT Services**, and
+  both lead the nav and homepage, with Personal Technology kept in the menu and last
+  on the homepage. `business-technology.html` was renamed `digital-solutions.html`
+  (301 from the old URL) and gained SEO & Digital Marketing as a seventh service.
+  New pages: `it-services.html` (hub), `business-it-support.html` (on-demand),
+  `fractional-it-leadership.html` (replaces the old Technology Consulting redirect
+  target), and `seo-digital-marketing.html`. Cloud & Business Systems stays and now sits
+  under IT Services. Kept flat URLs (no nested folders) so nothing else moves.
+  `_redirects` now sends `/business-it-services` to Business IT Support and
+  `/technology-consulting` to Fractional IT Leadership. Nav and footer rewritten on
+  every page, "More ... Services" tiles split per division, contact topic list
+  reordered business-first, About updated to lead with small businesses, sitemap
+  updated. No CSS changes. Held back from the plan: Managed IT, Cybersecurity,
+  Network & Infrastructure, Backup & DR, and the Get Started / Support menu.
 - Services revamp from "New TechStratus Services and Site Mapping.docx": Personal
   Technology is now Family + Senior (4 service areas each); Business Technology
   Services is now six services (website design, website care, branding, social

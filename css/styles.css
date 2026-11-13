@@ -152,6 +152,8 @@ p  { margin: 0 0 1rem; }
 .owner-photo { width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 18px 40px rgba(0,0,0,.25); }
 .about-media img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 18px 40px rgba(32,112,175,.18); transition: transform .25s ease, box-shadow .25s ease; }
 .about-media img:hover { transform: translateY(-6px); box-shadow: 0 26px 55px rgba(32,112,175,.3); }
+/* Service pages: image + short intro on top, card grid in the same section below */
+.about-grid + .container { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .area-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
 .area-list li {
   background: var(--white); border: 1px solid var(--border); color: var(--slate);
